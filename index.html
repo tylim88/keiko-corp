@@ -305,7 +305,9 @@
 	<script type="text/javascript">
 		const loadStyleSheet = src => {
 			const stylesheet = document.createElement('link');
-			stylesheet = { ...stylesheet, href: src, type: 'text/css', rel: 'stylesheet' }
+			stylesheet.href = src;
+			stylesheet.type = 'text/css';
+			stylesheet.rel = 'stylesheet';
 			document.getElementsByTagName('head')[0].appendChild(stylesheet)
 		}
 
