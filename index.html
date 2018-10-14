@@ -304,15 +304,12 @@
 
 	<script type="text/javascript">
 		const loadStyleSheet = src => {
-			const stylesheet = document.createElement('link');
-			stylesheet.href = src;
-			stylesheet.type = 'text/css';
-			stylesheet.rel = 'stylesheet';
+			let stylesheet = document.createElement('link');
+			stylesheet = { ...stylesheet, href: src, type: 'text/css', rel: 'stylesheet' }
 			document.getElementsByTagName('head')[0].appendChild(stylesheet)
 		}
 
 		window.onload = () => {
-			console.log('loaded')
 			loadStyleSheet("css/bootstrap.css");
 			loadStyleSheet("css/owl.transitions.css");
 			loadStyleSheet("css/owl.carousel.css");
